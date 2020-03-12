@@ -22,7 +22,7 @@ func main() {
 	}()
 
 	// handle http requests
-	http.Handle("/", http.StripPrefix("/", http.FileServer(http.Dir("./"))))
+	http.Handle("/", http.StripPrefix("/", http.FileServer(http.Dir("./file"))))
 
 	// handle http service
 	fmt.Println("Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...")
